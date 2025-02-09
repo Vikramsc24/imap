@@ -1,2 +1,2 @@
 # imap
-image mapping poc
+image mapping poc.
