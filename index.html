@@ -3,60 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure FinOps Cost Optimization</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            color: #0078D4;
-        }
-        p {
-            color: Green;
-        }
-        img {
-            width: 380px;
-            height: auto;
-            margin: 10px;
-        }
-    </style>
+    <title>Finops Roadmap</title>
 </head>
 <body>
-    <h1>Azure FinOps Cost Optimization</h1>
-    <p>Click on the various parts of the image to explore more</p>
+    <p style="text-align: center; font-size: 48px;position: relative; right:20px;  color: #8c5906;">Azure FinOps Roadmap</p>
+    <img src="FinOps_Cycle.png" usemap="#image-map" width="1200">
 
-    <img id="finopsImage" src="Azure_COST.jpg" usemap="#finopsmap" alt="Azure FinOps Cost Optimization">
-
-    <map name="finopsmap">
-        <area shape="poly" data-original-coords="280,220,450,150,520,250,350,320" href="https://learn.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-overview" alt="Azure Cost Management and Billing">
-        <area shape="poly" data-original-coords="500,140,670,190,640,300,480,260" href="https://azure.microsoft.com/en-us/products/machine-learning" alt="Azure Machine Learning and Analytics">
-        <area shape="poly" data-original-coords="700,210,830,320,770,400,620,340" href="https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/integration-overview" alt="Integration with Third-Party FinOps Tools">
-        <area shape="poly" data-original-coords="750,380,880,520,810,580,670,470" href="https://learn.microsoft.com/en-us/azure/governance/policy/overview" alt="Azure Policy and Governance">
-        <area shape="poly" data-original-coords="680,520,800,660,730,720,590,600" href="https://learn.microsoft.com/en-us/azure/advisor/advisor-reference-cost-recommendations" alt="Azure Advisor">
-        <area shape="poly" data-original-coords="500,620,600,750,500,820,400,700" href="https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations" alt="Reserved Instances (RIs)">
-        <area shape="poly" data-original-coords="320,600,450,720,350,820,250,700" href="https://azure.microsoft.com/en-in/pricing/calculator/?ef_id=_k_CjwKCAiAtYy9BhBcEiwANWQQL2MbQSHmzowu5t79DOhR-XVP4k0gzqDyDuiTq8ID4eUXQwt5g2AYwBoC0hgQAvD_BwE_k_&OCID=AIDcmmf1elj9v5_SEM__k_CjwKCAiAtYy9BhBcEiwANWQQL2MbQSHmzowu5t79DOhR-XVP4k0gzqDyDuiTq8ID4eUXQwt5g2AYwBoC0hgQAvD_BwE_k_&gad_source=1&gclid=CjwKCAiAtYy9BhBcEiwANWQQL2MbQSHmzowu5t79DOhR-XVP4k0gzqDyDuiTq8ID4eUXQwt5g2AYwBoC0hgQAvD_BwE" alt="Azure Cost Explorer">
-        <area shape="poly" data-original-coords="200,450,320,550,250,650,120,500" href="https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/allocate-costs" alt="Resource Tagging and Cost Allocation">
-        <area shape="circle" data-original-coords="494,479,100" href="https://azure.microsoft.com/en-in" alt="Microsoft Azure Main">
+    <map name="image-map">
+        <area shape="rect" coords="44,32,236,143" href="https://pages.git.i.mercedes-benz.com/CCoE/finops-guide/docs/category/gain-cost-transparency-1" alt="Gain Cost Transparency ">
+        <area shape="rect" coords="103,322,321,426" href="https://learn.microsoft.com/en-us/azure/advisor/advisor-reference-cost-recommendations?WT.mc_id=AZ-MVP-5000120" alt="Check Advisor recommendations and shut down unused or orphaned resources ">
+        <area shape="rect" coords="405,197,599,306" href="https://learn.microsoft.com/en-us/cloud-computing/finops/framework/optimize/workloads" alt="Workload Optimization ">
+        <area shape="rect" coords="632,358,850,455" href="https://azure.microsoft.com/en-us/pricing/offers/savings-plan-compute" alt="Use Reserved Instances and Savings Plans ">
+        <area shape="rect" coords="689,23,919,122" href="https://azure.microsoft.com/en-us/blog/focus-a-new-specification-for-cloud-cost-transparency/" alt="Continuous Improvement ">
+        <area shape="rect" coords="936,184,1163,279" href="https://learn.microsoft.com/en-us/assessments/azure-architecture-review/" alt="Critical Architecture Review ">
     </map>
-
-    <script>
-        function scaleMapAreas() {
-            var img = document.getElementById("finopsImage");
-            var originalWidth = 989; // Original image width   
-            var originalHeight = 958; // Original image height
-            var currentWidth = img.clientWidth;
-            var scale = currentWidth / originalWidth;
-
-            document.querySelectorAll("map[name='finopsmap'] area").forEach(area => {
-                var originalCoords = area.getAttribute("data-original-coords").split(",").map(Number);
-                var scaledCoords = originalCoords.map(coord => Math.round(coord * scale)).join(",");
-                area.setAttribute("coords", scaledCoords);
-            });
-        }
-
-        window.onload = scaleMapAreas;
-        window.onresize = scaleMapAreas;
-    </script>
 </body>
 </html>
+
